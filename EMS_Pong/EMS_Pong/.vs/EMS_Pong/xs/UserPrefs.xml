@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{E6E9D406-42E8-1A32-D5B2-F5E398C0AC3B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/openEMSstim.cs">
+    <Files>
+      <File FileName="Assets/Scripts/openEMSstim.cs" Line="53" Column="4" />
+      <File FileName="Assets/Scripts/LostPoint.cs" Line="33" Column="1" />
+      <File FileName="Assets/Scripts/Points.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MoveRacket.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HUD.cs" Line="27" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EMS_Pong" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="openEMSstim.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d03c9b4a-dbce-412c-8a92-e7aa57f5393c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
