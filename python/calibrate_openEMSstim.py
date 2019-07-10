@@ -4,8 +4,8 @@ import sys
 
 if len(sys.argv) >= 2:
     serial_port = sys.argv[1]
-else:    
-    serial_port = "/dev/tty.wchusbserial14210"
+else:
+    serial_port = "/dev/tty.usbserial-1410"
 import os
 from time import sleep
 from pyEMS import openEMSstim
@@ -92,7 +92,7 @@ def print_configuration(print_channel_config_next_time):
         print("Note: command history empty")
     print_channel_config_next_time = False
 
-def stimulate(ems_board, command, command_history, save_command_to_history, channel=None, intensity=None, duration=None): 
+def stimulate(ems_board, command, command_history, save_command_to_history, channel=None, intensity=None, duration=None):
     global channels
     if command:
         if save_command_to_history:
@@ -101,7 +101,7 @@ def stimulate(ems_board, command, command_history, save_command_to_history, chan
             last_duration = duration
         else:
             command = command_history[-1]
-        print("openEMSstim: stimulates now (raw command is:" + str(command) + ")")  
+        print("openEMSstim: stimulates now (raw command is:" + str(command) + ")")
         ems_board.send(command)
     else:
         print("Error: command invalid, hence not sent")
@@ -122,14 +122,14 @@ while (not_ended):
         print_configuration(print_channel_config_next_time)
     command = raw_input(command_list)
     command_tokens = command.split(" ")
-    
+
     # direct command mode
-    if len(command_tokens) == 3: 
+    if len(command_tokens) == 3:
         command = ems_command(command_tokens[0],command_tokens[1],command_tokens[2])
-        stimulate(my_ems_board, command, command_history, True, command_tokens[0], command_tokens[1], command_tokens[2]) 
-    
+        stimulate(my_ems_board, command, command_history, True, command_tokens[0], command_tokens[1], command_tokens[2])
+
     # save preset mode
-    elif len(command_tokens) == 2: 
+    elif len(command_tokens) == 2:
         if command_tokens[0] == "p":
             #p = Preset(command_history[-1])
             print("save preset mode is not implemented yet")
@@ -138,12 +138,12 @@ while (not_ended):
         elif command_tokens[0].isdigit():
             if contains(presets,command_tokens[1]) == True:
                 command = ems_command(command_tokens[0], command_tokens[1], preset_stimulation_duration)
-                stimulate(my_ems_board, command, command_history, True, command_tokens[0], command_tokens[1]) 
+                stimulate(my_ems_board, command, command_history, True, command_tokens[0], command_tokens[1])
             else:
                 print("Warning: preset " + str(command_tokens[1]) + " not found")
 
     # repeat command mode or all single "string" commands
-    elif len(command_tokens) == 1: 
+    elif len(command_tokens) == 1:
 
         # repeat last command mode
         if command_tokens[0] == "r":
@@ -154,7 +154,7 @@ while (not_ended):
 
         # display channel configurations mode
         elif command_tokens[0] == "d":
-            print_channel_config_next_time = True  
+            print_channel_config_next_time = True
 
         # save preset mode
         elif command_tokens[0] == "s":
@@ -163,22 +163,21 @@ while (not_ended):
         # quit program
         elif command_tokens[0] == "q":
             not_ended = False
-        
+
         # repeat command with de/in-crease in amplitude
-        elif len(command_tokens[0]) == 2 and len(command_history) >= 1: 
+        elif len(command_tokens[0]) == 2 and len(command_history) >= 1:
             if command_tokens[0][1] == "+" and len(command_history) >= 1:
                 #print("repeat previous command with +1 intensity :" + str(command_tokens))
                 if (channels[int(command_tokens[0][0])-1].intensity + 1 < 100):
-                    channels[int(command_tokens[0][0])-1].intensity += 1 
+                    channels[int(command_tokens[0][0])-1].intensity += 1
                 else:
                     print("Warning: amplitude is maxed out at " + str(channels[int(command_tokens[0][0])-1].intensity))
             elif command_tokens[0][1] == "-" and len(command_history) >= 1:
                 #print("repeat previous command with -1 intensity :" + str(command_tokens))
                 if (channels[int(command_tokens[0][0])-1].intensity - 1 > 0):
-                    channels[int(command_tokens[0][0])-1].intensity -= 1 
+                    channels[int(command_tokens[0][0])-1].intensity -= 1
                 else:
                     print("Warning: amplitude is at zero already " + str(channels[int(command_tokens[0][0])-1].intensity))
             command = ems_command(command_tokens[0][0], channels[int(command_tokens[0][0])-1].intensity, last_duration)
             if command:
                 stimulate(my_ems_board, command, command_history, True, int(command_tokens[0][0]), channels[int(command_tokens[0][0])-1].intensity, last_duration)
-

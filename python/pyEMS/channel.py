@@ -7,14 +7,14 @@ class Channel:
         self.intensity = intensity
         self.name = name
         self.presets = []
-    
+
     def search_preset(self,preset_name):
         for idx, p in enumerate(self.presets):
             if p.name == preset_name:
                 return True
             else:
                 return False
-    
+
     def set_channel(self,channel):
         self.channel_number_on_EMS_machine = channel
 
@@ -41,10 +41,9 @@ class Channel:
     def activate_preset(self,preset):
         if search_preset(preset.name) == True:
             self.intensity = preset.intensity
-            self.active_preset = preset.name 
+            self.active_preset = preset.name
         else:
-            print("Warning while activating preset: " + preset.name + " not found in Channel " + self.name) 
+            print("Warning while activating preset: " + preset.name + " not found in Channel " + self.name)
 
     def set_intensity(self,intensity):
         self.intensity = intensity
-
