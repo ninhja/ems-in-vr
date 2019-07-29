@@ -8,9 +8,9 @@ This repo documents my explorations in using electrical muscle stimulation (EMS)
 Below is a list of all of the materials I used in the making of this project. 
 
 [Medical-grade EMS device](https://tenswelt.de/products/tns-sm-2-mf-tens-reizstromgeraet-mit-burst-und-modulation) 
-I used this analog device to generate the electrical signals. It has 2 channels, which means you can use it to control at most 2 muscles. It requires a 9 volt battery. 
+I used this analog device to generate the electrical signals. It has 2 channels, which means you can use it to control at most 2 muscles. It requires a 9 volt battery.
 
-[Self-adhesive electrodes](https://tenswelt.de/pages/produkte/collections/elektroden-and-zubehoer/products/stimex-klebeelektroden-50-x-50-mm-selbstklebeelektroden-fuer-tens-und-ems). 
+[50 mm Self-adhesive electrodes](https://tenswelt.de/pages/produkte/collections/elektroden-and-zubehoer/products/stimex-klebeelektroden-50-x-50-mm-selbstklebeelektroden-fuer-tens-und-ems)
 
 [openEMSstim hardware module](http://plopes.org/ems/)
 For communicating between the EMS device and Unity, I used Pedro Lopes' awesome open-hardware EMS module called openEMSstim. To learn how to use it, check out [the openEMSstim github repo](https://github.com/PedroLopes/openEMSstim) for the full documentation. 
@@ -44,7 +44,7 @@ I did a lot of experimentation with the parameters of the electrical signal. Bas
 
 Here are some tips that I learned for electrical signal parameters: 
 1. I found that the best frequency for me was around 50 Hz. I found that higher frequencies beyond 50 Hz didn't change the strength of the muscle actuation at all, but I felt more muscle fatigue the higher the frequency. 
-2. I learned this from [this webpage]https://tens-ems.com/en/ems/device-settings/(https://tens-ems.com/en/ems/device-settings/):
+2. I learned this from [this webpage](https://tens-ems.com/en/ems/device-settings/(https://tens-ems.com/en/ems/device-settings/):
 - “Low frequencies (no higher than about 18 Hz) will mainly activate the slower reacting red muscle fibers. Power and endurance athletes will thus benefit from electrical muscle stimulation in this frequency range to build up muscle. When applied, it will cause a distinct contraction of the muscle.”
 - “Higher frequencies between 30 and 50 Hz stimulate the fast contracting white muscle fibers.”
 - “With frequencies of over 50 Hz, the muscle is deliberately overtaxed and can thus be forced into muscle hypertrophy (muscle build-up). To avoid overtraining, the interval between the sessions must be correctly chosen so that the muscle has enough time to regenerate.” 
