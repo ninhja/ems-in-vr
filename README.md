@@ -24,6 +24,8 @@ There are many ways that affect how the electrical signal feels, such as the fol
 3. Adhesiveness and size of the electrodes you use
 4. The individual's skin (sweat increases conductivity, dry skin decreases conductivity, and hair can sometimes interfere with the signal) 
 
+I think one aspect of EMS that's unavoidable (but perhaps I am wrong?) is that the user will feel some muscle fatigue after using EMS. This is especially true if using EMS for longer periods of time, or if the EMS is not properly calibrated (i.e. bad electrode placement, electrodes that lost their stickiness, etc). For that reason, it's important to properly calibrate the signal to avoid discomfort/muscle fatigue as much as possible. 
+
 ### Placing electrodes
 Here are some tips I learned for electrode placement: 
 1. It’s generally safer to put the electrodes on the right side of the body because it’s further away from the heart. 
@@ -46,13 +48,9 @@ Here are some tips that I learned for electrical signal parameters:
 - “Low frequencies (no higher than about 18 Hz) will mainly activate the slower reacting red muscle fibers. Power and endurance athletes will thus benefit from electrical muscle stimulation in this frequency range to build up muscle. When applied, it will cause a distinct contraction of the muscle.”
 - “Higher frequencies between 30 and 50 Hz stimulate the fast contracting white muscle fibers.”
 - “With frequencies of over 50 Hz, the muscle is deliberately overtaxed and can thus be forced into muscle hypertrophy (muscle build-up). To avoid overtraining, the interval between the sessions must be correctly chosen so that the muscle has enough time to regenerate.” 
-3. Frequencies that are around 30 Hz or lower are noticeably different. I can more palpably feel the vibrations and ticks. 
-4. The right intensity setting changes from individual to individual, and it's also different every time for the same individual. Skin conductivity is affected by the amount of sweat and hair, the size of the muscle, etc. So it's important to carefully calibrate the intensity every time you use EMS, starting low and slow and gradually increasing the intensity until you achieve a pain-free muscle actuation. 
-
-
-
-Read more from Pedro Lopes' [tips and tricks doc here](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/4.exploring_ems_settings_and_parameters.md).
-
+3. Frequencies that are around 30 Hz or lower feel noticeably different. I can more palpably slower vibrations and ticks. 
+4. The right intensity setting changes from individual to individual, and it's also different every time for the same individual, because of varying skin conductivity and size/location/depth of the muscle. Skin conductivity is affected by the amount of sweat and hair on the skin. So it's important to carefully calibrate the right intensity settomg every time you use EMS. Start low and slow, and gradually increase the intensity until you achieve a pain-free muscle actuation. 
+5. Read more from Pedro Lopes' [tips and tricks doc here](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/4.exploring_ems_settings_and_parameters.md).
 
 Some links with helpful relevant info that helped me: 
 - [EMS in HCI: Challenges and Opportunities in Actuating Human Bodies](https://hci.uni-hannover.de/papers/duente2017Tutorial.pdf)
