@@ -99,4 +99,10 @@ You can find the documentation for the [HTC Vive Hand Tracking SDK here.](https:
 - An important thing to note is that it works a lot better if the wrist is visible and not covered by clothing. 
 - The color of the hands changes depending on the gesture. The Hand Tracking SDK can recognize 5 different gestures. In the ICU Unity scene, the only notable gesture to remember is that the hand turns blue when it's a fist. 
 
+#### Notes About Study Design:
+- EMS in HCI: Challenges and Opportunities in Actuating Human Bodies
+  - https://hci.uni-hannover.de/papers/duente2017Tutorial.pdf
+  - This has some useful info about the basics of electrodes, where to place them 
+  - “A study with EMS needs specific treatment of the participants such as clear introduction on the technology and consent forms, which should also address risks and safety information. The participants have to confirm that they have no relevant health issues and agree to get electrodes attached to their bodies by the instructor. After that there should be a step by step introduction to EMS to allow the participant to get used to the sensation. For reproducibility of the user study, EMS parameters should be reported such as frequency, pulse width, voltage, and current.” 
+
 
