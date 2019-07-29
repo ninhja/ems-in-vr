@@ -28,6 +28,8 @@ There are many ways that affect how the electrical signal feels, such as the fol
 
 I think one aspect of EMS that's unavoidable (but perhaps I am wrong?) is that the user will feel some muscle fatigue after using EMS. This is especially true if using EMS for longer periods of time, or if the EMS is not properly calibrated (i.e. bad electrode placement, electrodes that lost their stickiness, etc). For that reason, it's important to properly calibrate the signal to avoid discomfort/muscle fatigue as much as possible. 
 
+Pedro Lopez made a great calibration tutorial, which you can read in step-by-step detail [here](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/1.getting_started_step_by_step.md), and he also made a tutorial video that you can watch [here.](http://plopes.org/ems/#testingEMSmachine) 
+
 ### Placing Electrodes
 Here are some tips I learned for electrode placement: 
 1. It’s generally safer to put the electrodes on the right side of the body because it’s further away from the heart. 
@@ -62,6 +64,8 @@ The openEMSstim module communicates with Unity via Serial USB communication. You
 Before you start using EMS in your VR environment, it's helpful to find the right parameters first with this simple calibration GUI that I created in Unity. You can find it in this repo as a file called EMS_Calibration.unitypackage. If you import the package into Unity and play the scene, you'll see this screen:
 
 ![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+
+Before you press any button on the GUI to send commands to the openEMSstim hardware module, it takes a bit of time for Unity to establish a working connection with openEMSstim. At the top of the screen, you'll see a time counter that tells you how many seconds passed since the scene started. Wait about 10 seconds after starting until you starting sending EMS commands. 
 
 Some links with helpful relevant info that helped me: 
 - [EMS in HCI: Challenges and Opportunities in Actuating Human Bodies](https://hci.uni-hannover.de/papers/duente2017Tutorial.pdf)
