@@ -5,14 +5,15 @@ This repo documents my explorations in using electrical muscle stimulation (EMS)
 [My Day-to-Day Process Notes (but skip this and read below... I'm just leaving it here for my own reference)](https://docs.google.com/document/d/1RLxw7XNduukD_50_s6lb3dYKiTGEtaLbcdvorFLF1EQ/edit?usp=sharing)
 
 ## 1. EMS Hardware Materials
-Below is a list of all of the materials I used in the making of this project. 
 
 [Medical-grade EMS device](https://tenswelt.de/products/tns-sm-2-mf-tens-reizstromgeraet-mit-burst-und-modulation) 
+
 I used this analog device to generate the electrical signals. It has 2 channels, which means you can use it to control at most 2 muscles. It requires a 9 volt battery.
 
 [50 mm Self-adhesive electrodes](https://tenswelt.de/pages/produkte/collections/elektroden-and-zubehoer/products/stimex-klebeelektroden-50-x-50-mm-selbstklebeelektroden-fuer-tens-und-ems)
 
 [openEMSstim hardware module](http://plopes.org/ems/)
+
 For communicating between the EMS device and Unity, I used Pedro Lopes' awesome open-hardware EMS module called openEMSstim. To learn how to use it, check out [the openEMSstim github repo](https://github.com/PedroLopes/openEMSstim) for the full documentation. 
 
 ## 2. Basics of Electrical Muscle Stimulation (EMS) 
@@ -39,9 +40,9 @@ Here are some tips I learned for electrode placement:
 5. Read more about [what NOT to do with using an EMS device here](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/0.WhatNotToDo.md). 
 6. Each channel on the EMS device requires 2 electrodes which you stick on your skin over the muscle you want to actuate or send haptic feedback to. The larger the size of the electrode, the more the electrical signal gets distributed throughout the muscle and surrounding skin/tissue. Smaller electrodes might give you a bit more precision in targeting a specific muscle, but it may be more difficult to find the right electrode placement in calibration. I used 50mm electrodes, which are on the larger end, which gives me more flexibility and leeway in finding electrode placements that painlessly actuate muscles (but they may be too large to precisely actuate specific muscles that are smaller, such as muscles for individual fingers.)
 7. Familiarize yourself with human anatomy! You can't actuate muscles if you don't know where the muscles are. Here are some links that helped me figure out where the muscles are:
-- [Pad placement charts](https://www.toneamatic.com/pages/pad-placement)
-- [Pad placement tips/explanation (plus videos on electrode placement)](http://www.globususa.com/electrode-placement-explained) 
-- [More tips](http://proffessa.co.za/articles/electrode-placements/)
+  - [Pad placement charts](https://www.toneamatic.com/pages/pad-placement)
+  - [Pad placement tips/explanation (plus videos on electrode placement)](http://www.globususa.com/electrode-placement-explained) 
+  - [More tips](http://proffessa.co.za/articles/electrode-placements/)
 
 ### Calibrating the Parameters of the Electrical Signal
 I did a lot of experimentation with the parameters of the electrical signal in order to actuate muscles while minimizing discomfort and muscle fatigue. With the TNS SM 2 analog EMS device that I used, I can control the intensity (amplitude) of both channels, and also the frequency in Hertz.  
@@ -49,9 +50,9 @@ I did a lot of experimentation with the parameters of the electrical signal in o
 Here are some tips that I learned for electrical signal parameters: 
 1. I found that the best frequency for me was around 50 Hz. I found that higher frequencies beyond 50 Hz didn't change the strength of the muscle actuation at all, but I felt more muscle fatigue after using EMS with higher frequencies. 
 2. I learned the following from [this webpage](https://tens-ems.com/en/ems/device-settings/(https://tens-ems.com/en/ems/device-settings/):
-- “Low frequencies (no higher than about 18 Hz) will mainly activate the slower reacting red muscle fibers. Power and endurance athletes will thus benefit from electrical muscle stimulation in this frequency range to build up muscle. When applied, it will cause a distinct contraction of the muscle.”
-- “Higher frequencies between 30 and 50 Hz stimulate the fast contracting white muscle fibers.”
-- “With frequencies of over 50 Hz, the muscle is deliberately overtaxed and can thus be forced into muscle hypertrophy (muscle build-up). To avoid overtraining, the interval between the sessions must be correctly chosen so that the muscle has enough time to regenerate.” 
+  - “Low frequencies (no higher than about 18 Hz) will mainly activate the slower reacting red muscle fibers. Power and endurance athletes will thus benefit from electrical muscle stimulation in this frequency range to build up muscle. When applied, it will cause a distinct contraction of the muscle.”
+  - “Higher frequencies between 30 and 50 Hz stimulate the fast contracting white muscle fibers.”
+  - “With frequencies of over 50 Hz, the muscle is deliberately overtaxed and can thus be forced into muscle hypertrophy (muscle build-up). To avoid overtraining, the interval between the sessions must be correctly chosen so that the muscle has enough time to regenerate.” 
 3. Frequencies that are around 30 Hz or lower feel noticeably different. I can more palpably slower vibrations and ticks. 
 4. The right intensity setting changes from individual to individual, and it's also different every time for the same individual, because of varying skin conductivity and size/location/depth of the muscle. Skin conductivity is affected by the amount of sweat and hair on the skin. So it's important to carefully calibrate the right intensity settomg every time you use EMS. Start low and slow, and gradually increase the intensity until you achieve a pain-free muscle actuation. 
 5. Read more from Pedro Lopes' [tips and tricks doc here](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/4.exploring_ems_settings_and_parameters.md).
