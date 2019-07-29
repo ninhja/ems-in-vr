@@ -70,15 +70,15 @@ Here are some tips that I learned for electrical signal parameters:
 The openEMSstim module communicates with Unity via Serial USB communication. You can send EMS commands from Unity to the openEMSstim module using the openEMSstim communication protocol, which you can [read about here.](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/3.software_guide.md)
 
 #### EMS Signal Calibration in Unity
-Before you start using EMS in your VR environment, it's helpful to find the right parameters first with this simple calibration GUI that I created in Unity, which works for up to 2 EMS channels. You can find it in this repo as a file called EMS_Calibration.unitypackage. If you import the package into Unity and play the scene, you'll see this screen:
-
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+Before you start using EMS in your VR environment, it's helpful to find the right parameters first with this simple calibration GUI that I created in Unity, which works for up to 2 EMS channels. You can find it in this repo as a file called EMS_Calibration.unitypackage. Import the package into Unity and play the scene.
 
 Before you press any button on the GUI to send commands to the openEMSstim hardware module, it takes a bit of time for Unity to establish a working connection with openEMSstim. At the top of the screen, you'll see a time counter that tells you how many seconds passed since the scene started. Wait about 10 seconds after starting until you starting sending EMS commands. Then you can start clicking on buttons on the GUI to trigger an EMS signal for the corresponding channel and intensity for 500 ms. 
 
 You can change the EMS commands that are mapped to the buttons on the GUI by changing EMS command variables in the Manager.cs script. You can also look at the GM object in the project hierarchy, and then change the variables under the Manager script component in Inspector.  
 
 #### Using EMS in the ICU Scene in Unity
+Like with the Calibration GUI explained above, you have to wait about 10 seconds after pressing play on the ICU scene until EMS starts to work. 
+
 I used 2 EMS channels to actuate 2 muscles on one arm: one channel on the triceps and the other channel on the palm extensor on the forearm. When the player touches any hard object, they get a gentle actuation of the palm extensor muscle, which extends the palm backwards to simulate the impact of the hand colliding with a surface. When the player holds an object (in this scene, the player can hold the Medicine Carousel object) they feel vibration haptic feedback on their triceps to simulate feeling the weight of the object.
 
 EMS haptic and force feedback gets triggered in the Unity scene when the player enters a trigger collider attached to an object. That object contains a script that communicates with the attached openEMSstim object (it's called openEMSstim_container in the project hierarchy). 
