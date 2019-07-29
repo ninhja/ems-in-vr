@@ -85,4 +85,18 @@ EMS haptic and force feedback gets triggered in the Unity scene when the player 
 
 There are two different EMS-enabling scripts that I used. One is called EMS_HardSurfaces.cs, which triggers gentle actuation of the palm flexor when the player touches a surface with their hand. Another is called EMS_GrabObject.cs, which triggers gentle vibration of the triceps when the player holds an object. When the player enters the object's trigger collider, OnTriggerEnter gets called, which sends the stimulation command to the openEMSstim module.
 
+I designed 4 types of interactions with EMS haptic/force feedback in this ICU environment. 
+1. You can walk around the ICU room and touch things, triggering a slight actuation of the palm flexor. 
+2. There are 5 different machines around the room that make loud annoying alarm noises, and you can tell if they're making an alarm if the machine's screen or buttons are glowing red. Touch the machine and the alarm will turn off, and the screen or buttons will turn green. Touch it again, and the alarm will turn back on and so will the red signals. Touching the machine will trigger a slight actuation of the palm flexor.
+3. There's a person on the bed. Touching the person will stop their coughing and make them sleep instead. Touching them will trigger a slight actuation of the palm flexor.
+4. On top of the ventilator (which is the machine to the left of the bed), there is a medicine carousel, which is the small white disc-shaped object. You can pick it up by closing your hand into a fist, then move it towards the medicine carousel until it moves into your hand. As long as you keep holding your hand into a closed fist, you'll continue to hold the object, and you'll get a gentle vibration on your tricep muscle to simulate feeling the weight of the object. As soon as you open your hand and move it away from the object, the object will drop and the tricep muscle stimulation will end. 
+  - Note: your hand displayed in VR will turn blue to signal that Unity recognizes your hand gesture as a closed fist.
+
+### Hands-Free Interaction in VR
+For interacting with the VR environment, I decided not to use the handheld controllers that come with the HTC Vive. This is because I wanted to actuate the palm flexor muscle, and it would be difficult to hold onto the handheld controller when actuating that muscle. I also thought that having hands-free interaction would make interacting with the VR environment feel a lot more natural and less clunky. 
+
+You can find the documentation for the [HTC Vive Hand Tracking SDK here.](https://developer.vive.com/resources/knowledgebase/vive-hand-tracking-sdk/). The tracking can be a bit laggy, and the thumb looks weird most of the time, but for the most part it works pretty well for our purposes. 
+- An important thing to note is that it works a lot better if the wrist is visible and not covered by clothing. 
+- The color of the hands changes depending on the gesture. The Hand Tracking SDK can recognize 5 different gestures. In the ICU Unity scene, the only notable gesture to remember is that the hand turns blue when it's a fist. 
+
 
