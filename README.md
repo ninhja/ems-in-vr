@@ -103,7 +103,8 @@ Some tidbits to consider:
 - “There’s a disconnect between the tingly sensation on my arm and my muscle moving.” 
   - Using EMS on the palm flexor means that the electrodes are stuck on the forearm. So, when you trigger the EMS feedback, the tingly haptic feedback happens near the electrodes on the forearm, but the actual muscle actuation happens on the fingers. The participant also noted that there was a slight lag between the tingliness and the actuation. 
 - “I wouldn’t want the EMS signal to last very long.” 
-  - To avoid uncomfortable sensations or even pain, minimize the signal to a duration that’s as short as possible, and don't overdo it. - "My muscle feels like it's been used, and a bit tired."   "Like how it feels after I'd just exercised"   “It feels really strange afterwards” 
+  - To avoid uncomfortable sensations or even pain, minimize the signal to a duration that’s as short as possible, and don't overdo it.
+- "My muscle feels like it's been used, and a bit tired."   "Like how it feels after I'd just exercised"   “It feels really strange afterwards” 
   - Every participant noted that they felt some degree of muscle fatigue after using EMS. This was surprising to me, given that they had only used it for just a little bit. 
 
 
