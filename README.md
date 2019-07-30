@@ -6,13 +6,13 @@ This repo documents my explorations in using electrical muscle stimulation (EMS)
 
 ## 1. Tools
 
-#### Hardware
+### Hardware
 - [Medical-grade EMS device](https://tenswelt.de/products/tns-sm-2-mf-tens-reizstromgeraet-mit-burst-und-modulation): I used this analog device to generate the electrical signals. It has 2 channels, which means you can use it to control at most 2 muscles. It requires a 9 volt battery.
 - [50 mm Self-adhesive electrodes](https://tenswelt.de/pages/produkte/collections/elektroden-and-zubehoer/products/stimex-klebeelektroden-50-x-50-mm-selbstklebeelektroden-fuer-tens-und-ems): These come off easily, so it's handy to use medical tape, rubber bands, velcro straps, or whatever you have on hand  to keep the electrodes secured on the skin. 
 - [openEMSstim hardware module](http://plopes.org/ems/): For communicating between the EMS device and Unity, I used Pedro Lopes' awesome open-hardware EMS module called openEMSstim. To learn how to use it, check out [the openEMSstim github repo](https://github.com/PedroLopes/openEMSstim) for the full documentation.
 - HTC Vive HMD
   
-#### Software 
+### Software 
 - Unity
 - [HTC Vive Hand Tracking SDK](https://developer.viveport.com/documents/sdk/en/vivehandtracking_index.html?_ga=2.71670870.493605801.1564407317-1284242289.1562595620) (which only works with the HTC Vive).
   
@@ -32,7 +32,7 @@ I think one aspect of EMS that's unavoidable (but perhaps I am wrong?) is that t
 
 Pedro Lopez made a great calibration tutorial, which you can read in step-by-step detail [here](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/1.getting_started_step_by_step.md), and he also made a tutorial video that you can watch [here.](http://plopes.org/ems/#testingEMSmachine) 
 
-#### Placing Electrodes
+### Placing Electrodes
 Here are some tips I learned for electrode placement: 
 1. It’s generally safer to put the electrodes on the right side of the body because it’s further away from the heart. 
 2. When placing 2 electrodes for a single channel, always put the 2 electrodes within a few centimeters away from one another, and always on the same side of the body (otherwise the electric signal will go through the heart, which you don’t want.)
@@ -45,7 +45,7 @@ Here are some tips I learned for electrode placement:
   - [Pad placement tips/explanation (plus videos on electrode placement)](http://www.globususa.com/electrode-placement-explained) 
   - [More tips](http://proffessa.co.za/articles/electrode-placements/)
 
-#### Calibrating the Parameters of the Electrical Signal
+### Calibrating the Parameters of the Electrical Signal
 I did a lot of experimentation with the parameters of the electrical signal in order to actuate muscles while minimizing discomfort and muscle fatigue. With the TNS SM 2 analog EMS device that I used, I can control the intensity (amplitude) of both channels, and also the frequency in Hertz.  
 
 Here are some tips that I learned for electrical signal parameters: 
@@ -63,22 +63,24 @@ Here are some tips that I learned for electrical signal parameters:
 
 The openEMSstim module communicates with Unity via Serial USB communication. You can send EMS commands from Unity to the openEMSstim module using the openEMSstim communication protocol, which you can [read about here.](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/3.software_guide.md)
 
-#### EMS Signal Calibration in Unity
+### EMS Signal Calibration in Unity
 Before you start using EMS in your VR environment, it's helpful to find the right parameters first with this simple calibration GUI that I created in Unity, which works for up to 2 EMS channels. You can find it in this repo as a file called EMS_Calibration.unitypackage. Import the package into Unity and play the scene.
 
 Before you press any button on the GUI to send commands to the openEMSstim hardware module, it takes a bit of time for Unity to establish a working connection with openEMSstim. At the top of the screen, you'll see a time counter that tells you how many seconds passed since the scene started. Wait about 10 seconds after starting until you starting sending EMS commands. Then you can start clicking on buttons on the GUI to trigger an EMS signal for the corresponding channel and intensity for 500 ms. 
 
 You can change the EMS commands that are mapped to the buttons on the GUI by changing EMS command variables in the Manager.cs script. You can also look at the GM object in the project hierarchy, and then change the variables under the Manager script component in Inspector.  
 
-#### Using EMS in the ICU Scene in Unity
+### Using EMS in the ICU Scene in Unity
 Like with the Calibration GUI explained above, you have to wait about 10 seconds after pressing play on the ICU scene until EMS starts to work. 
 
 I used 2 EMS channels to actuate 2 muscles on one arm: one channel on the triceps and the other channel on the palm extensor on the forearm. When the player touches any hard object, they get a gentle actuation of the palm extensor muscle, which extends the palm backwards to simulate the impact of the hand colliding with a surface. When the player holds an object (in this scene, the player can hold the Medicine Carousel object) they feel vibration haptic feedback on their triceps to simulate feeling the weight of the object.
 
 EMS haptic and force feedback gets triggered in the Unity scene when the player enters a trigger collider attached to an object. That object contains a script that communicates with the attached openEMSstim object (it's called openEMSstim_container in the project hierarchy). 
 
+#### C# Scripts for Triggering EMS in Unity
 There are two different EMS-enabling scripts that I used. One is called EMS_HardSurfaces.cs, which triggers gentle actuation of the palm flexor when the player touches a surface with their hand. Another is called EMS_GrabObject.cs, which triggers gentle vibration of the triceps when the player holds an object. When the player enters the object's trigger collider, OnTriggerEnter gets called, which sends the stimulation command to the openEMSstim module.
 
+#### EMS Feedback Interactions
 I designed 4 types of interactions with EMS haptic/force feedback in this ICU environment. 
 1. You can walk around the ICU room and touch things, triggering a slight actuation of the palm flexor. 
 2. There are 5 different machines around the room that make loud annoying alarm noises, and you can tell if they're making an alarm if the machine's screen or buttons are glowing red. Touch the machine and the alarm will turn off, and the screen or buttons will turn green. Touch it again, and the alarm will turn back on and so will the red signals. Touching the machine will trigger a slight actuation of the palm flexor.
@@ -86,7 +88,7 @@ I designed 4 types of interactions with EMS haptic/force feedback in this ICU en
 4. On top of the ventilator (which is the machine to the left of the bed), there is a medicine carousel, which is the small white disc-shaped object. You can pick it up by closing your hand into a fist, then move it towards the medicine carousel until it moves into your hand. As long as you keep holding your hand into a closed fist, you'll continue to hold the object, and you'll get a gentle vibration on your tricep muscle to simulate feeling the weight of the object. As soon as you open your hand and move it away from the object, the object will drop and the tricep muscle stimulation will end. 
   - Note: your hand displayed in VR will turn blue to signal that Unity recognizes your hand gesture as a closed fist.
 
-#### Hands-Free Interaction in VR
+### Hands-Free Interaction in VR
 For interacting with the VR environment, I decided not to use the handheld controllers that come with the HTC Vive. This is because I wanted to actuate the palm flexor muscle, and it would be difficult to hold onto the handheld controller when actuating that muscle. I also thought that having hands-free interaction would make interacting with the VR environment feel a lot more natural and less clunky. 
 
 You can find the documentation for the [HTC Vive Hand Tracking SDK here.](https://developer.vive.com/resources/knowledgebase/vive-hand-tracking-sdk/). The tracking can be a bit laggy, and the thumb looks weird most of the time, but for the most part it works pretty well for our purposes. 
