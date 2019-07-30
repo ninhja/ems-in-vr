@@ -44,6 +44,7 @@ Here are some tips I learned for electrode placement:
   - [Pad placement charts](https://www.toneamatic.com/pages/pad-placement)
   - [Pad placement tips/explanation (plus videos on electrode placement)](http://www.globususa.com/electrode-placement-explained) 
   - [More tips](http://proffessa.co.za/articles/electrode-placements/)
+8. To pinpoint the exact location of the muscle, I found it helpful to apply gentle pressure over where I think the muscle is located, then contract that muscle a few times. The muscle will bulge with each contraction and you can feel/see where it is (unless the muscle is too small). At least one of the electrodes should be on that muscle bulge. 
 
 ### Calibrating the Parameters of the Electrical Signal
 I did a lot of experimentation with the parameters of the electrical signal in order to actuate muscles while minimizing discomfort and muscle fatigue. With the TNS SM 2 analog EMS device that I used, I can control the intensity (amplitude) of both channels, and also the frequency in Hertz.  
@@ -94,6 +95,19 @@ For interacting with the VR environment, I decided not to use the handheld contr
 You can find the documentation for the [HTC Vive Hand Tracking SDK here.](https://developer.vive.com/resources/knowledgebase/vive-hand-tracking-sdk/). The tracking can be a bit laggy, and the thumb looks weird most of the time, but for the most part it works pretty well for our purposes. 
 - An important thing to note is that it works a lot better if the wrist is visible and not covered by clothing. 
 - The color of the hands changes depending on the gesture. The Hand Tracking SDK can recognize 5 different gestures. In the ICU Unity scene, the only notable gesture to remember is that the hand turns blue when it's a fist. 
+
+## Workshop Results
+At the end of June, I hosted a brief workshop where I tested EMS with 7 different people in one-on-one interviews. I calibrated and actuated the palm flexor on each participant's right arm (with their informed consent), with a set frequency of 50 Hz. We discussed their experience of the sensation of EMS as well as potential applications of EMS in HCI. 
+
+Some tidbits to consider:
+- “There’s a disconnect between the tingly sensation on my arm and my muscle moving.” 
+  - Using EMS on the palm flexor means that the electrodes are stuck on the forearm. So, when you trigger the EMS feedback, the tingly haptic feedback happens near the electrodes on the forearm, but the actual muscle actuation happens on the fingers. The participant also noted that there was a slight lag between the tingliness and the actuation. 
+- “I wouldn’t want the EMS signal to last very long.” 
+  - To avoid uncomfortable sensations or even pain, minimize the signal to a duration that’s as short as possible, and don't overdo it. - "My muscle feels like it's been used, and a bit tired."   "Like how it feels after I'd just exercised"   “It feels really strange afterwards” 
+  - Every participant noted that they felt some degree of muscle fatigue after using EMS. This was surprising to me, given that they had only used it for just a little bit. 
+
+
+Talk about what you learned from the poster session-- that not everyone is interested in EMS and the group of people you didn't learn about in the study is those who arne't interested in EMS... so the people that signed up were solely in the group of people that were curious about EMS, or at least open to it. 
 
 ## Notes About Study Design:
 - EMS in HCI: Challenges and Opportunities in Actuating Human Bodies
