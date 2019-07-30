@@ -7,21 +7,14 @@ This repo documents my explorations in using electrical muscle stimulation (EMS)
 ## 1. Tools
 
 #### Hardware
-[Medical-grade EMS device](https://tenswelt.de/products/tns-sm-2-mf-tens-reizstromgeraet-mit-burst-und-modulation) 
-
-  - I used this analog device to generate the electrical signals. It has 2 channels, which means you can use it to control at most 2 muscles. It requires a 9 volt battery.
-
-[50 mm Self-adhesive electrodes](https://tenswelt.de/pages/produkte/collections/elektroden-and-zubehoer/products/stimex-klebeelektroden-50-x-50-mm-selbstklebeelektroden-fuer-tens-und-ems)
-
-  - These come off easily, so it's handy to use medical tape, rubber bands, velcro straps, or whatever you have on hand  to keep the electrodes secured on the skin. 
-
-[openEMSstim hardware module](http://plopes.org/ems/)
-
-  - For communicating between the EMS device and Unity, I used Pedro Lopes' awesome open-hardware EMS module called openEMSstim. To learn how to use it, check out [the openEMSstim github repo](https://github.com/PedroLopes/openEMSstim) for the full documentation.
-  
+- [Medical-grade EMS device](https://tenswelt.de/products/tns-sm-2-mf-tens-reizstromgeraet-mit-burst-und-modulation): I used this analog device to generate the electrical signals. It has 2 channels, which means you can use it to control at most 2 muscles. It requires a 9 volt battery.
+- [50 mm Self-adhesive electrodes](https://tenswelt.de/pages/produkte/collections/elektroden-and-zubehoer/products/stimex-klebeelektroden-50-x-50-mm-selbstklebeelektroden-fuer-tens-und-ems): These come off easily, so it's handy to use medical tape, rubber bands, velcro straps, or whatever you have on hand  to keep the electrodes secured on the skin. 
+- [openEMSstim hardware module](http://plopes.org/ems/): For communicating between the EMS device and Unity, I used Pedro Lopes' awesome open-hardware EMS module called openEMSstim. To learn how to use it, check out [the openEMSstim github repo](https://github.com/PedroLopes/openEMSstim) for the full documentation.
+- HTC Vive HMD
   
 #### Software 
-  Unity and [HTC Vive Hand Tracking SDK](https://developer.viveport.com/documents/sdk/en/vivehandtracking_index.html?_ga=2.71670870.493605801.1564407317-1284242289.1562595620) (which only works with the HTC Vive).
+- Unity
+- [HTC Vive Hand Tracking SDK](https://developer.viveport.com/documents/sdk/en/vivehandtracking_index.html?_ga=2.71670870.493605801.1564407317-1284242289.1562595620) (which only works with the HTC Vive).
   
 
 ## 2. Basics of Electrical Muscle Stimulation (EMS) 
@@ -102,7 +95,6 @@ You can find the documentation for the [HTC Vive Hand Tracking SDK here.](https:
 ## Notes About Study Design:
 - EMS in HCI: Challenges and Opportunities in Actuating Human Bodies
   - https://hci.uni-hannover.de/papers/duente2017Tutorial.pdf
-  - This has some useful info about the basics of electrodes, where to place them 
   - “A study with EMS needs specific treatment of the participants such as clear introduction on the technology and consent forms, which should also address risks and safety information. The participants have to confirm that they have no relevant health issues and agree to get electrodes attached to their bodies by the instructor. After that there should be a step by step introduction to EMS to allow the participant to get used to the sensation. For reproducibility of the user study, EMS parameters should be reported such as frequency, pulse width, voltage, and current.” 
 
 
