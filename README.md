@@ -109,7 +109,7 @@ Some tidbits to consider:
 - "My muscle feels like it's been used, and a bit tired." Another participant said it's "like how it feels after I'd just exercised." Another said that “it feels really strange afterwards.” 
   - Every participant noted that they felt some degree of muscle fatigue after using EMS. This was surprising to me, given that they had only used it for just a little bit. 
 
-Shortly after the workshop, I presented my work at a poster session during the summer school at OFFIS. I talked to some people who weren't super open to the idea of EMS, and I realized that there was a core perspective I didn't get to hear during my workshop. The people that signed up for the workshop were interested, or curious, or at least open to EMS, and I didn't hear from the people who weren't open to it. 
+Shortly after the workshop, I presented my work at a poster session during the summer school at OFFIS. I talked to some people who weren't super open to the idea of EMS, and I realized that that was a core perspective I didn't get to hear during my workshop. The people that signed up for the workshop were only those that were interested, or curious, or at least open to EMS.
 
 ## Notes About Study Design:
 - EMS in HCI: Challenges and Opportunities in Actuating Human Bodies
