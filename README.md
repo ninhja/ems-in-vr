@@ -49,14 +49,15 @@ Here are some tips I learned for electrode placement:
 I did a lot of experimentation with the parameters of the electrical signal in order to actuate muscles while minimizing discomfort and muscle fatigue. With the TNS SM 2 analog EMS device that I used, I can control the intensity (amplitude) of both channels, and also the frequency in Hertz.  
 
 Here are some tips that I learned for electrical signal parameters: 
-1. I found that the best frequency for me was around 50 Hz. I found that higher frequencies beyond 50 Hz didn't change the strength of the muscle actuation at all, but I felt more muscle fatigue after using EMS with higher frequencies. 
-2. I learned the following from [this webpage](https://tens-ems.com/en/ems/device-settings/(https://tens-ems.com/en/ems/device-settings/):
+1. The right parameters vary between individuals, and they even vary between different muscles on the same individual. It depends on the skin conductivity, hair on the skin, the depth of the muscle under the skin, etc. 
+2. I found that the best frequency for me was around 50 Hz. I found that higher frequencies beyond 50 Hz didn't change the strength of the muscle actuation at all, but I felt more muscle fatigue after using EMS with higher frequencies. 
+3. I learned the following from [this webpage](https://tens-ems.com/en/ems/device-settings/(https://tens-ems.com/en/ems/device-settings/):
   - “Low frequencies (no higher than about 18 Hz) will mainly activate the slower reacting red muscle fibers. Power and endurance athletes will thus benefit from electrical muscle stimulation in this frequency range to build up muscle. When applied, it will cause a distinct contraction of the muscle.”
   - “Higher frequencies between 30 and 50 Hz stimulate the fast contracting white muscle fibers.”
   - “With frequencies of over 50 Hz, the muscle is deliberately overtaxed and can thus be forced into muscle hypertrophy (muscle build-up). To avoid overtraining, the interval between the sessions must be correctly chosen so that the muscle has enough time to regenerate.” 
-3. Frequencies that are around 30 Hz or lower feel noticeably different. I can more palpably slower vibrations and ticks. 
-4. The right intensity setting changes from individual to individual, and it's also different every time for the same individual, because of varying skin conductivity and size/location/depth of the muscle. Skin conductivity is affected by the amount of sweat and hair on the skin. So it's important to carefully calibrate the right intensity settomg every time you use EMS. Start low and slow, and gradually increase the intensity until you achieve a pain-free muscle actuation. 
-5. Read more from Pedro Lopes' [tips and tricks doc here](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/4.exploring_ems_settings_and_parameters.md).
+4. Frequencies that are around 30 Hz or lower feel noticeably different. I can more palpably slower vibrations and ticks. 
+5. The right intensity setting changes from individual to individual, and it's also different every time for the same individual, because of varying skin conductivity and size/location/depth of the muscle. Skin conductivity is affected by the amount of sweat and hair on the skin. So it's important to carefully calibrate the right intensity settomg every time you use EMS. Start low and slow, and gradually increase the intensity until you achieve a pain-free muscle actuation. 
+6. Read more from Pedro Lopes' [tips and tricks doc here](https://github.com/PedroLopes/openEMSstim/blob/master/start-here-tutorials/4.exploring_ems_settings_and_parameters.md).
 
 ## 3. Using EMS in Unity 
 
