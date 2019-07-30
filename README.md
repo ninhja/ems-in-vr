@@ -97,18 +97,19 @@ You can find the documentation for the [HTC Vive Hand Tracking SDK here.](https:
 - The color of the hands changes depending on the gesture. The Hand Tracking SDK can recognize 5 different gestures. In the ICU Unity scene, the only notable gesture to remember is that the hand turns blue when it's a fist. 
 
 ## Workshop Results
-At the end of June, I hosted a brief workshop where I tested EMS with 7 different people in one-on-one interviews. I calibrated and actuated the palm flexor on each participant's right arm (with their informed consent), with a set frequency of 50 Hz. We discussed their experience of the sensation of EMS as well as potential applications of EMS in HCI. 
+At the end of June, I hosted a brief workshop where I tested EMS with 7 different people in one-on-one interviews. I wanted to see how the participants reacted to the sensation of EMS, and learn from their perspective how they experienced it and how they think EMS might be useful in HCI. I also wanted to practice calibrating the signal on other people besides myself. Eventually these findings would inform my decisions when designing interactions with EMS feedback in my VR nursing care environment. 
+
+I calibrated and actuated the palm flexor on each participant's right arm (with their informed consent), with a set frequency of 50 Hz. Afterwards, we discussed their experience of the EMS sensation as well as potential applications of EMS in HCI. 
 
 Some tidbits to consider:
 - “There’s a disconnect between the tingly sensation on my arm and my muscle moving.” 
-  - Using EMS on the palm flexor means that the electrodes are stuck on the forearm. So, when you trigger the EMS feedback, the tingly haptic feedback happens near the electrodes on the forearm, but the actual muscle actuation happens on the fingers. The participant also noted that there was a slight lag between the tingliness and the actuation. 
+  - Using EMS on the palm flexor requires that the electrodes are stuck on the forearm. So, when you trigger the EMS feedback, the tingly haptic feedback happens around the electrodes on the forearm, but the actual muscle actuation happens on the wrist and fingers. The participant also noted that there was a slight lag between the tingliness and the actuation. 
 - “I wouldn’t want the EMS signal to last very long.” 
-  - To avoid uncomfortable sensations or even pain, minimize the signal to a duration that’s as short as possible, and don't overdo it.
-- "My muscle feels like it's been used, and a bit tired."   "Like how it feels after I'd just exercised"   “It feels really strange afterwards” 
+  - To avoid uncomfortable sensations or even pain, minimize the signal to a duration that’s as short as possible, and don't overdo it. The participant also suggested that, in a VR environment, don't trigger EMS feedback in everything all the time. Rather, just use it for important things like alerts. 
+- "My muscle feels like it's been used, and a bit tired." Another participant said it's "like how it feels after I'd just exercised." Another said that “it feels really strange afterwards.” 
   - Every participant noted that they felt some degree of muscle fatigue after using EMS. This was surprising to me, given that they had only used it for just a little bit. 
 
-
-Talk about what you learned from the poster session-- that not everyone is interested in EMS and the group of people you didn't learn about in the study is those who arne't interested in EMS... so the people that signed up were solely in the group of people that were curious about EMS, or at least open to it. 
+Shortly after the workshop, I presented my work at a poster session during the summer school at OFFIS. I talked to some people who weren't super open to the idea of EMS. I realized that not everyone is interested in EMS and the group of people you didn't learn about in the study is those who arne't interested in EMS... so the people that signed up were solely in the group of people that were curious about EMS, or at least open to it. 
 
 ## Notes About Study Design:
 - EMS in HCI: Challenges and Opportunities in Actuating Human Bodies
